@@ -5,8 +5,10 @@ RUN apt-get install -y build-essential
 
 COPY . /app
 
-WORKDIR /app RUN pip install -r requirements.txt
+WORKDIR /app 
 
-#ENTRYPOINT ['python']
+RUN pip install -r requirements.txt
 
-CMD ['app.py']
+ENTRYPOINT ["python"]
+
+CMD ["app.py"]
