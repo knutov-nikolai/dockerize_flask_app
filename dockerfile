@@ -5,7 +5,7 @@ RUN apt-get install -y build-essential
 
 COPY . /app
 
-WORKDIR /app 
+WORKDIR /app
 
 RUN pip install -r requirements.txt
 
