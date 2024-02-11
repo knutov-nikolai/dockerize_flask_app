@@ -4,4 +4,4 @@ registry:
   ports:
     - 5000:5000
   volumes:
-    - /path/data:./registry
+    - /path/data:/registry
