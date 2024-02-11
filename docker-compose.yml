@@ -1,7 +1,28 @@
-registry:
-  restart: always
-  image: registry:2
-  ports:
-    - 5000:5000
-  volumes:
-    - /path/data:./registry
+version: '3'
+services:
+  # registry:
+  #   build: ./
+  #   container_name: registry
+  #   environment:
+  #     - REGISTRY_ENV=development
+  #     - PYTHONUNBUFFERED=True
+  #   restart: on-failure
+  #   volumes:
+  #     - ./:/registry
+  #   # image: ./
+  #   ports:
+  #     - 5000:5000
+
+  flask_app:
+    build: ./
+    container_name: flask_app
+    environment:
+      - FLASK_ENV=development
+      - PYTHONUNBUFFERED=True
+    restart: on-failure
+    volumes:
+      - ./:/flask_app
+    # image: ./
+    ports:
+      - 8000:8000
+    command: python app.py
