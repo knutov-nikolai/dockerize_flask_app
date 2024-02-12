@@ -4,7 +4,6 @@ services:
     image: registry:2
     ports:
       - "5000:5000"
-
   flask_app:
     build: .
     ports:
