@@ -5,6 +5,6 @@ services:
     ports:
       - "5000:5000"
   flask_app:
-    build: .
+    image: localhost:5000/flask-app
     ports:
       - "8000:8000"

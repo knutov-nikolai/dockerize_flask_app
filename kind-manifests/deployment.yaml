@@ -16,8 +16,6 @@ spec:
     spec:
       containers:
       - name: flask-app
-        image: your-registry/flask-app:latest
-        # command: ["python"]
-        # args: ["-m", "flask", "run", "--host=0.0.0.0", "--port=8000"]
+        image: localhost:5000/flask_app
         ports:
         - containerPort: 8000
