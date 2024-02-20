@@ -15,7 +15,7 @@ spec:
         app: flask_app
     spec:
       containers:
-      - name: flask
-        image: localhost:5000/flask_app
-        ports:
-        - containerPort: 8000
+        - name: flask
+          image: localhost:5000/flask_app
+          ports:
+            - containerPort: 8000
